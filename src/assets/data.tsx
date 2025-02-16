@@ -109,6 +109,6 @@ export const projects: Project[] = [
       <IconText icon={<IoLogoReact />} text="React" />,
       <IconText text="Tailwind CSS" />,
     ],
-    link: "https://github.com/HarutSargsyan/portfolio",
+    link: "https://github.com/HarutSargsyan/harutsargsyan.github.io",
   },
 ];
