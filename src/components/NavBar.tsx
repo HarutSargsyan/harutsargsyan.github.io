@@ -6,12 +6,15 @@ import { useState } from "react";
 const StyledNavLink = ({
   to,
   children,
+  toggleNav,
 }: {
   to: string;
   children: React.ReactNode;
+  toggleNav?: () => void;
 }) => {
   return (
     <NavLink
+      onClick={toggleNav}
       to={to}
       className={({ isActive }) =>
         isActive ? "text-xl mr-6 border-b-3 border-primary" : "text-xl mr-6"
@@ -45,13 +48,13 @@ export default function NavBar() {
       >
         <ul className="flex flex-col gap-6 text-center text-lg sm:h-full sm:flex-row sm:justify-center sm:gap-6 md:gap-8 lg:gap-10">
           <li>
-            <StyledNavLink to="/">Home</StyledNavLink>
+            <StyledNavLink toggleNav={toggleNav} to="/">Home</StyledNavLink>
           </li>
           <li>
-            <StyledNavLink to="/experience">Experience</StyledNavLink>
+            <StyledNavLink toggleNav={toggleNav} to="/experience">Experience</StyledNavLink>
           </li>
           <li>
-            <StyledNavLink to="/projects">Projects</StyledNavLink>
+            <StyledNavLink toggleNav={toggleNav} to="/projects">Projects</StyledNavLink>
           </li>
         </ul>
       </div>

@@ -14,7 +14,7 @@ export default ({
   link: string;
 }) => {
   return (
-    <a href={link} className="group flex gap-6 rounded-lg bg-grey bg-white p-5">
+    <a target="_blank" href={link} className="group flex gap-6 rounded-lg bg-grey bg-white p-5">
       <div className="hidden sm:block rounded-lg flex-shrink-0 bg-black transparent group-hover:opacity-[50%]">
         <img src={img} alt="" className="h-48 w-80 object-cover rounded-lg" />
       </div>
