@@ -9,7 +9,6 @@
   --font-display: "League Spartan", sans-serif;
   --font-logo: "Pacifico", serif;
   --animate-fade: fade 1s ease-in-out;
-  --animate-typing: typing 1.5s steps(20) alternate;
 
   @keyframes fade {
     0% {
@@ -20,13 +19,4 @@
     }
   }
 
-  @keyframes typing {
-    0% {
-      width: 0%;
-      visibility: hidden;
-    }
-    100% {
-      width: 100%;
-    }
-  }
 }

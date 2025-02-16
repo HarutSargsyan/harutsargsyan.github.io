@@ -3,21 +3,21 @@ import { IoMdMail } from "react-icons/io";
 
 export default () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between md:mt-25">
+    <div className="flex flex-col md:flex-row items-center justify-between md:mt-25 animate-fade">
       <div className="flex-[1] flex flex-col justify-center md:max-w-170">
         <div className="flex mb-2">
-          <span className="text-4xl md:text-7xl mr-4 animate-fade font-bold">
+          <span className="text-4xl md:text-7xl mr-4 font-bold">
             I'm{" "}
           </span>{" "}
-          <span className="text-4xl md:text-7xl animate-fade text-primary font-bold">
+          <span className="text-4xl md:text-7xl text-primary font-bold">
             Harut Sargsyan
           </span>
         </div>
         <div className="flex flex-col mb-3">
-          <span className="text-2xl md:text-4xl animate-typing font-medium overflow-hidden whitespace-nowrap border-r-black pr-5">
+          <span className="text-2xl md:text-4xl font-medium overflow-hidden whitespace-nowrap pr-5">
             - Software Developer
           </span>
-          <span className="text-2xl md:text-4xl animate-typing font-medium overflow-hidden border-r-black whitespace-nowrap">
+          <span className="text-2xl md:text-4xl font-medium overflow-hidden whitespace-nowrap">
             - CS at Northwestern University
           </span>
         </div>
@@ -60,7 +60,7 @@ export default () => {
           </a>
         </div>
       </div>
-      <div className="flex-[1] hidden max-w-80 md:block mt-10 animate-fade aspect-square rounded-full overflow-hidden border-4 border-primary">
+      <div className="flex-[1] hidden max-w-80 md:block mt-10 aspect-square rounded-full overflow-hidden border-4 border-primary">
         <img
           src="/harut.jpg"
           alt="My image"

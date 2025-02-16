@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { IoLogoDocker, IoLogoFirebase } from "react-icons/io5";
+import { IoLogoDocker, IoLogoFirebase, IoLogoReact } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -71,5 +71,44 @@ export const experiences: Experience[] = [
       <IconText icon={<IoLogoFirebase />} text="Firebase" />,
       <IconText icon={<FaGithub />} text="Github" />,
     ],
+  },
+];
+
+interface Project {
+  title: string;
+  desc: string;
+  img: string;
+  stack: ReactElement[];
+  link: string;
+}
+
+export const projects: Project[] = [
+  {
+    title: "LeFinance",
+    desc: "LeFinance is a simplistic stock portfolio app. It uses Firebase for authenticating users and multiple AWS services for sending newsletter and databaser services It helps users keep track of the stocks and run simplictic Meta Prophet model on the stock price to predict future price.",
+    img: "/stocks.png",
+    stack: [
+      <IconText icon={<IoLogoReact />} text="React" />,
+      <IconText icon={<IoLogoDocker />} text="Docker" />,
+      <IconText icon={<IoLogoFirebase />} text="Firebase" />,
+    ],
+    link: "https://youtu.be/LdEM6BMSbyU",
+  },
+  {
+    title: "Minesweeper",
+    desc: "Minimalistic minesweeper game clone, using C/C++ and SFML.",
+    img: "/minesweeper.png",
+    stack: [<IconText text="C/C++" />, <IconText text="SFML" />],
+    link: "https://youtu.be/MQIdJqihNJo",
+  },
+  {
+    title: "Portfolio",
+    desc: "This portfolio website, built with React and Tailwind CSS, showcases my projects and skills.",
+    img: "/portfolio.png",
+    stack: [
+      <IconText icon={<IoLogoReact />} text="React" />,
+      <IconText text="Tailwind CSS" />,
+    ],
+    link: "https://github.com/HarutSargsyan/portfolio",
   },
 ];
