@@ -58,9 +58,9 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    company: "ReCat(startup in Garage)",
-    title: "Software Engineer",
-    dates: "March 2024 - September 2024",
+    company: "Franqbox",
+    title: "Software Developer",
+    dates: "May 2020 - September 2021",
     bulletList: [
       "Redesigned the business dashboard using React.js and Ant Design and developed a multi-step onboarding system, improving user experience and onboarding efficiency.",
       "Developed controllers using Express.js to retrieve data from PostgreSQL, reducing query response times by 15% by adding indexing and optimizing database queries",
