@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { IoLogoDocker, IoLogoFirebase, IoLogoReact } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaPython } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAws } from "react-icons/fa";
 
@@ -28,10 +28,10 @@ export const experiences: Experience[] = [
     title: "Software Engineer Intern",
     dates: "June 2024 - September 2024",
     bulletList: [
-      "Designed a C#(.NET) web application allowing users to rent and lend computer resources, streamlining resource sharing among users.",
-      "Deduced Entity Relational Diagrams out of the business logic of application and created PostgreSQL schemas by utilizing Entity Framework.",
-      "Implemented resource sharing functionality and secure SSH connections through Canonical LXD API and Cloudflare tunneling, enhancing reliability and user experience",
-      "Ensured consistent environment by containerizing the application with Docker and automated CI/CD pipelines by utilizing Github Action for deploying the application to AWS ECR, reducing deployment time by 30%.",
+      "Designed and developed a web application using C# (.NET) to facilitate peer-to-peer sharing of computing resources, improving accessibility and operational efficiency for users.",
+      "Modeled and implemented database schemas based on business logic using an object-relational mapping framework, supporting robust data management.",
+      "Developed secure remote access and resource management features, enhancing user experience and platform reliability.",
+      "Containerized the application and integrated automated CI/CD workflows to streamline deployment, resulting in a 30% reduction in deployment time.",
     ],
     skills: [
       <IconText text=".NET/C#" />,
@@ -91,6 +91,8 @@ export const projects: Project[] = [
       <IconText icon={<IoLogoReact />} text="React" />,
       <IconText icon={<IoLogoDocker />} text="Docker" />,
       <IconText icon={<IoLogoFirebase />} text="Firebase" />,
+      <IconText icon={<FaAws />} text="AWS" />,
+      <IconText icon={<FaPython />} text="Python" />,
     ],
     link: "https://youtu.be/LdEM6BMSbyU",
   },
