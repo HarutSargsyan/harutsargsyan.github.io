@@ -24,21 +24,18 @@ const IconText = ({ icon, text }: { icon?: ReactElement; text: string }) => {
 
 export const experiences: Experience[] = [
   {
-    company: "SLYD",
+    company: "CDK Global",
     title: "Software Engineer Intern",
-    dates: "June 2024 - September 2024",
+    dates: "June 2025 - August 2025",
     bulletList: [
-      "Designed and developed a web application using C# (.NET) to facilitate peer-to-peer sharing of computing resources, improving accessibility and operational efficiency for users.",
-      "Modeled and implemented database schemas based on business logic using an object-relational mapping framework, supporting robust data management.",
-      "Developed secure remote access and resource management features, enhancing user experience and platform reliability.",
-      "Containerized the application and integrated automated CI/CD workflows to streamline deployment, resulting in a 30% reduction in deployment time.",
+      "Developing features for a ASP.NET web application on the OEM team that handles car service appointment scheduling.",
+      "Participating in bi-weekly sprints within a Scrum-based Agile team to integrate appointment data into a dealership-facing dashboard, streamlining workflows for service staff",
     ],
     skills: [
       <IconText text=".NET/C#" />,
-      <IconText icon={<IoLogoDocker />} text="Docker" />,
       <IconText icon={<FaGithub />} text="Github" />,
       <IconText icon={<BiLogoPostgresql />} text="PosgreSQL" />,
-      <IconText icon={<FaAws />} text="AWS" />,
+      <IconText icon={<FaAws />} text="Azure" />,
     ],
   },
   {
@@ -83,6 +80,16 @@ interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "GroceryScout",
+    desc: "GroceryScout makes it easy to track and compare grocery prices across stores to save money on your shopping.",
+    img: "/grocery.png",
+    stack: [
+      <IconText icon={<IoLogoReact />} text="React" />,
+      <IconText icon={<IoLogoFirebase />} text="Firebase" />,
+    ],
+    link: "https://food-price-tracker-gamma.vercel.app",
+  },
   {
     title: "LeFinance",
     desc: "LeFinance is a simplistic stock portfolio app. It uses Firebase for authenticating users and multiple AWS services for sending newsletter and databaser services It helps users keep track of the stocks and run simplictic Meta Prophet model on the stock price to predict future price.",
