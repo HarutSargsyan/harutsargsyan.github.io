@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { IoLogoDocker, IoLogoFirebase, IoLogoReact } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaGithub, FaPython } from "react-icons/fa";
+import { FaGithub, FaMicrosoft, FaPython } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAws } from "react-icons/fa";
 
@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
       <IconText text=".NET/C#" />,
       <IconText icon={<FaGithub />} text="Github" />,
       <IconText icon={<BiLogoPostgresql />} text="PosgreSQL" />,
-      <IconText icon={<FaAws />} text="Azure" />,
+      <IconText icon={<FaMicrosoft />} text="Azure" />,
     ],
   },
   {

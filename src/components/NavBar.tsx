@@ -56,9 +56,9 @@ export default function NavBar() {
           <li>
             <StyledNavLink toggleNav={toggleNav} to="/projects">Projects</StyledNavLink>
           </li>
-          <li>
+          {/* <li>
             <StyledNavLink toggleNav={toggleNav} to="/coursework">Coursework</StyledNavLink>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
