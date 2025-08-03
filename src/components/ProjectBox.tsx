@@ -23,7 +23,7 @@ export default ({
           {title}
         </h2>
         <p>{desc}</p>
-        <div className="flex gap-2 mt-3">
+        <div className="flex gap-2 mt-3 flex-wrap">
           {stack.map((skill, index) => (
             <span
               key={index}
