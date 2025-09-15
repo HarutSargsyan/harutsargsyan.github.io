@@ -19,3 +19,87 @@
     }
   }
 }
+
+/* Typing animation utilities */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: var(--color-primary) }
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+}
+
+.typing-slow {
+  animation-duration: 2.5s, .8s;
+}
+
+.typing-delay-1 {
+  animation-delay: .4s, .4s;
+}
+
+/* Caret animations using opacity */
+@keyframes caret-blink { 0%,100% { opacity: 0 } 50% { opacity: 1 } }
+@keyframes caret-hide { to { opacity: 0 } }
+
+/* Base caret (hidden by default; revealed by seq classes) */
+.typing::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--color-primary);
+  margin-left: 2px;
+  opacity: 0;
+}
+
+/* Half-height caret variant */
+.caret-half::after {
+  height: 0.6em;
+  transform: translateY(0.2em);
+}
+
+/* Sequential presets: duration, start delay, and finite blink count */
+.typing-seq-1 {
+  animation:
+    typing 2s steps(30, end) 0s 1 both;
+}
+.typing-seq-1::after {
+  animation:
+    caret-blink .8s step-end 0s 3,
+    caret-hide 0s linear 2s 1 forwards;
+  opacity: 1;
+}
+
+.typing-seq-2 {
+  /* starts after seq-1 completes */
+  /* "- Software Developer" is 20 visible characters including spaces and dash */
+  animation:
+    typing 2s steps(20, end) 2.1s 1 both;
+}
+.typing-seq-2::after {
+  animation:
+    caret-blink .8s step-end 2.1s 3,
+    caret-hide 0s linear 4.1s 1 forwards;
+  opacity: 1;
+}
+
+.typing-seq-3 {
+  /* starts after seq-2 completes */
+  animation:
+    typing 2.2s steps(32, end) 4.4s 1 both;
+}
+.typing-seq-3::after {
+  animation:
+    caret-blink .8s step-end 4.4s 3,
+    caret-hide 0s linear 6.6s 1 forwards;
+  opacity: 1;
+}

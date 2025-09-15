@@ -33,7 +33,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className="sticky top-0 z-50 mb-8 flex justify-between w-full px-8 py-4 bg-stone-50">
+    <div className="sticky top-0 z-50 mb-8 flex justify-between w-full px-8 py-4 bg-stone-50 shadow-md">
       <div className="font-logo text-xl hover:text-primary">HSargsyan</div>
       {!isOpenNav ? (
         <RxHamburgerMenu onClick={toggleNav} size={25} className="sm:hidden" />
@@ -56,9 +56,9 @@ export default function NavBar() {
           <li>
             <StyledNavLink toggleNav={toggleNav} to="/projects">Projects</StyledNavLink>
           </li>
-          {/* <li>
+          <li>
             <StyledNavLink toggleNav={toggleNav} to="/coursework">Coursework</StyledNavLink>
-          </li> */}
+          </li>
         </ul>
       </div>
     </div>

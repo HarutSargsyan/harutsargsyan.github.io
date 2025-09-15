@@ -6,18 +6,15 @@ export default () => {
     <div className="flex flex-col md:flex-row items-center justify-between md:mt-25 animate-fade">
       <div className="flex-[1] flex flex-col justify-center md:max-w-170">
         <div className="flex mb-2">
-          <span className="text-4xl md:text-7xl mr-4 font-bold">
-            I'm{" "}
-          </span>{" "}
-          <span className="text-4xl md:text-7xl text-primary font-bold">
-            Harut Sargsyan
+          <span className="text-4xl md:text-7xl text-primary font-bold typing typing-seq-1">
+            <span className="text-black">I'm</span> Harut Sargsyan
           </span>
         </div>
         <div className="flex flex-col mb-3">
-          <span className="text-2xl md:text-4xl font-medium overflow-hidden whitespace-nowrap pr-5">
+          <span className="text-2xl md:text-4xl font-medium overflow-hidden whitespace-nowrap typing typing-seq-2 caret-half">
             - Software Developer
           </span>
-          <span className="text-2xl md:text-4xl font-medium overflow-hidden whitespace-nowrap">
+          <span className="text-2xl md:text-4xl font-medium overflow-hidden whitespace-nowrap typing typing-seq-3">
             - CS at Northwestern University
           </span>
         </div>
