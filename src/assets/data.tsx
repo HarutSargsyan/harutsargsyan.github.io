@@ -121,3 +121,53 @@ export const projects: Project[] = [
     link: "https://github.com/HarutSargsyan/harutsargsyan.github.io",
   },
 ];
+
+export interface Course {
+  title: string;
+  bullets: string[];
+  tags?: string[];
+}
+
+export const coursework: Course[] = [
+  {
+    title: "Database Systems",
+    bullets: [
+      "Implemented ACID-style transactions and concurrency in C++",
+      "Built B+ tree index structures with search/insert/delete",
+      "Prototyped iterator-based query execution models (operators/pipelines)",
+      "Simulated buffer/page management for storage access",
+    ],
+    tags: ["C++", "B+ Trees", "Transactions", "Execution Models"],
+  },
+  {
+    title: "Scalable Software Architecture",
+    bullets: [
+      "Built cloud services resilient to crashes and restarts",
+      "Served many concurrent users via network APIs",
+      "Applied 3‑tier design: frontend, backend, database",
+      "Used SQL/NoSQL, queues, caches, CDNs, load balancers, serverless",
+      "Practiced DevOps: CI/CD, staging, containers/VMs, logging, monitoring",
+    ],
+    tags: ["Cloud", "APIs", "CDN", "Load Balancing", "CI/CD", "Containers"],
+  },
+  {
+    title: "Programming Languages",
+    bullets: [
+      "Explored language paradigms and runtime semantics",
+      "Reasoned about types, memory, and safety guarantees",
+      "Implemented interpreters/components to study evaluation models",
+    ],
+    tags: ["Type Systems", "Interpreters", "Semantics"],
+  },
+  {
+    title: "Parallel Computing",
+    bullets: [
+      "Studied shared/distributed memory, CPU vs GPU, multicore/multiprocessor",
+      "Used models: threads, OpenMP, MPI, CUDA, MapReduce",
+      "Handled race conditions, synchronization, barriers, deadlocks",
+      "Analyzed caching, coherence, consistency, profiling, speedup, Amdahl’s law",
+      "Discussed lock‑free data structures and parallel algorithms",
+    ],
+    tags: ["OpenMP", "MPI", "CUDA", "Amdahl's Law"],
+  },
+];
