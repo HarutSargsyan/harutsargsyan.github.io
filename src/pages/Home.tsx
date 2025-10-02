@@ -5,29 +5,29 @@ export default () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between md:mt-25 animate-fade">
       <div className="flex-[1] flex flex-col justify-center md:max-w-170">
-        <div className="flex mb-2">
-          <span className="text-4xl md:text-7xl text-primary font-bold typing typing-seq-1">
+        <div className="flex mb-5">
+          <span className="text-6xl md:text-7xl text-primary font-bold typing typing-seq-1">
             <span className="text-black">I'm</span> Harut Sargsyan
           </span>
         </div>
-        <div className="flex flex-col mb-3">
+        <div className="flex flex-col mb-6">
           <span className="text-2xl md:text-4xl font-medium overflow-hidden whitespace-nowrap typing typing-seq-2 caret-half">
             - Software Developer
           </span>
           <span className="text-2xl md:text-4xl font-medium overflow-hidden whitespace-nowrap typing typing-seq-3">
-            - CS at Northwestern University
+            - BS/MS in CS at Northwestern University
           </span>
         </div>
         <div className="mb-3">
-          <span className="text-lg leading-8">
-            Hi, I’m Harut Sargsyan, a Computer Science sophomore at Northwestern
-            University with a passion for building technology that makes a
-            difference. I enjoy solving complex problems, learning new tools,
-            and collaborating with others to bring ideas to life. I’m
-            particularly excited about working on real-world projects that have
-            a tangible impact, and I’m always eager to grow as a developer while
-            contributing to meaningful solutions. Check out my Projects and
-            Experiences section to learn more about my expertise.
+          <span className="text-2xl line leading-10">
+            I am a Software Engineer, student, and lifelong learner with a
+            passion for building impactful technology. My journey has led me to
+            engineer scalable web apps, optimize APIs with Redis caching and
+            database indexing, and design modular React Native components that
+            improved user experience. Along the way, I’ve honed my collaboration
+            and mentorship skills through leading peer review sessions. I’m
+            eager to keep growing as a developer and contribute to meaningful,
+            real-world solutions.
           </span>
         </div>
         <div className="justify-center md:justify-start flex space-around gap-x-3">
