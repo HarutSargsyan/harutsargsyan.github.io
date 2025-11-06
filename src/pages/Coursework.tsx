@@ -8,9 +8,14 @@ export default () => {
 
       <div className="px-2 sm:px-20 flex flex-col gap-6">
         {coursework.map((course, idx) => (
-          <CourseBox key={idx} title={course.title} bullets={course.bullets} tags={course.tags} />
+          <CourseBox
+            key={idx}
+            title={course.title}
+            bullets={course.bullets}
+            tags={course.tags}
+          />
         ))}
       </div>
     </div>
   );
-}
+};
