@@ -1,9 +1,8 @@
 import { ReactElement } from "react";
-import { IoLogoDocker, IoLogoFirebase, IoLogoReact } from "react-icons/io5";
+import { IoLogoDocker, IoLogoFirebase } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaGithub, FaMicrosoft, FaPython } from "react-icons/fa";
+import { FaGithub, FaMicrosoft } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaAws } from "react-icons/fa";
 
 interface Experience {
   company: string;
@@ -75,8 +74,10 @@ interface Project {
   title: string;
   desc: string;
   img: string;
-  stack: ReactElement[];
+  stack: string[];
   link: string;
+  category: string;
+  repo?: string;
 }
 
 export const projects: Project[] = [
@@ -84,41 +85,34 @@ export const projects: Project[] = [
     title: "GroceryScout",
     desc: "GroceryScout makes it easy to track and compare grocery prices across stores to save money on your shopping.",
     img: "/grocery.png",
-    stack: [
-      <IconText icon={<IoLogoReact />} text="React" />,
-      <IconText icon={<IoLogoFirebase />} text="Firebase" />,
-    ],
+    stack: ["React", "Firebase", "Tailwind CSS"],
     link: "https://food-price-tracker-gamma.vercel.app",
+    category: "Web App",
   },
   {
     title: "LeFinance",
     desc: "LeFinance is a simplistic stock portfolio app. It uses Firebase for authenticating users and multiple AWS services for sending newsletter and databaser services It helps users keep track of the stocks and run simplictic Meta Prophet model on the stock price to predict future price.",
     img: "/stocks.png",
-    stack: [
-      <IconText icon={<IoLogoReact />} text="React" />,
-      <IconText icon={<IoLogoDocker />} text="Docker" />,
-      <IconText icon={<IoLogoFirebase />} text="Firebase" />,
-      <IconText icon={<FaAws />} text="AWS" />,
-      <IconText icon={<FaPython />} text="Python" />,
-    ],
+    stack: ["React", "Docker", "Firebase", "AWS", "Python"],
     link: "https://youtu.be/LdEM6BMSbyU",
+    category: "Fintech",
   },
   {
     title: "Minesweeper",
     desc: "Minimalistic minesweeper game clone, using C/C++ and SFML.",
     img: "/minesweeper.png",
-    stack: [<IconText text="C/C++" />, <IconText text="SFML" />],
+    stack: ["C/C++", "SFML"],
     link: "https://youtu.be/MQIdJqihNJo",
+    category: "Game Dev",
   },
   {
     title: "Portfolio",
     desc: "This portfolio website, built with React and Tailwind CSS, showcases my projects and skills.",
     img: "/portfolio.png",
-    stack: [
-      <IconText icon={<IoLogoReact />} text="React" />,
-      <IconText text="Tailwind CSS" />,
-    ],
+    stack: ["React", "Tailwind CSS"],
     link: "https://github.com/HarutSargsyan/harutsargsyan.github.io",
+    category: "Personal Site",
+    repo: "https://github.com/HarutSargsyan/harutsargsyan.github.io",
   },
 ];
 
