@@ -1,105 +1,80 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400..700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #3a7d44;
-  --color-secondary: #9dc08b;
-  --color-background: #d3d3d3;
-  --font-display: "League Spartan", sans-serif;
-  --font-logo: "Pacifico", serif;
-  --animate-fade: fade 1s ease-in-out;
+  --color-ink: #121212;
+  --color-muted: #6a6a6a;
+  --color-line: #e6e2da;
+  --color-paper: #fdfbf7;
+  --color-wash: #f6f1ea;
+  --color-accent: #1f6f5f;
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-serif: "Instrument Serif", serif;
+  --animate-fade: fade 0.7s ease both;
+  --animate-rise: rise 0.7s ease both;
 
   @keyframes fade {
     0% {
       opacity: 0;
     }
     100% {
-      opacity: 1; 
+      opacity: 1;
+    }
+  }
+
+  @keyframes rise {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
 
-/* Typing animation utilities */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+:root {
+  color-scheme: light;
+  --color-ink: #121212;
+  --color-muted: #6a6a6a;
+  --color-line: #e6e2da;
+  --color-paper: #fdfbf7;
+  --color-wash: #f6f1ea;
+  --color-accent: #1f6f5f;
 }
 
-@keyframes blink {
-  0%, 100% { border-color: transparent }
-  50% { border-color: var(--color-primary) }
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-ink: #f5f3ee;
+  --color-muted: #b1a79c;
+  --color-line: rgba(255, 255, 255, 0.12);
+  --color-paper: #0f0f10;
+  --color-wash: #1b1917;
+  --color-accent: #8cd6c3;
 }
 
-.typing {
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  position: relative;
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background:
+    radial-gradient(1100px circle at 15% -10%, rgba(255, 255, 255, 0.95) 0%, var(--color-paper) 45%, transparent 70%),
+    radial-gradient(900px circle at 80% 10%, rgba(255, 255, 255, 0.9) 0%, var(--color-wash) 45%, transparent 70%),
+    var(--color-paper);
 }
 
-.typing-slow {
-  animation-duration: 2.5s, .8s;
+[data-theme="dark"] body {
+  background:
+    radial-gradient(900px circle at 20% -20%, rgba(42, 40, 38, 0.9) 0%, var(--color-paper) 55%, transparent 75%),
+    radial-gradient(1000px circle at 90% 0%, rgba(34, 32, 30, 0.9) 0%, var(--color-wash) 50%, transparent 75%),
+    var(--color-paper);
 }
 
-.typing-delay-1 {
-  animation-delay: .4s, .4s;
+::selection {
+  background: rgba(31, 111, 95, 0.18);
 }
 
-/* Caret animations using opacity */
-@keyframes caret-blink { 0%,100% { opacity: 0 } 50% { opacity: 1 } }
-@keyframes caret-hide { to { opacity: 0 } }
-
-/* Base caret (hidden by default; revealed by seq classes) */
-.typing::after {
-  content: "";
-  display: inline-block;
-  width: 2px;
-  height: 1em;
-  background: var(--color-primary);
-  margin-left: 2px;
-  opacity: 0;
-}
-
-/* Half-height caret variant */
-.caret-half::after {
-  height: 0.6em;
-  transform: translateY(0.2em);
-}
-
-/* Sequential presets: duration, start delay, and finite blink count */
-.typing-seq-1 {
-  animation:
-    typing 2s steps(30, end) 0s 1 both;
-}
-.typing-seq-1::after {
-  animation:
-    caret-blink .8s step-end 0s 3,
-    caret-hide 0s linear 2s 1 forwards;
-  opacity: 1;
-}
-
-.typing-seq-2 {
-  /* starts after seq-1 completes */
-  /* "- Software Developer" is 20 visible characters including spaces and dash */
-  animation:
-    typing 2s steps(20, end) 2.1s 1 both;
-}
-.typing-seq-2::after {
-  animation:
-    caret-blink .8s step-end 2.1s 3,
-    caret-hide 0s linear 4.1s 1 forwards;
-  opacity: 1;
-}
-
-.typing-seq-3 {
-  /* starts after seq-2 completes */
-  animation:
-    typing 2.2s steps(32, end) 4.4s 1 both;
-}
-.typing-seq-3::after {
-  animation:
-    caret-blink .8s step-end 4.4s 3,
-    caret-hide 0s linear 6.6s 1 forwards;
-  opacity: 1;
+.rise-in {
+  animation: var(--animate-rise);
 }
