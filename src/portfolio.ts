@@ -69,11 +69,11 @@ export const portfolioData: PortfolioData = {
     tagline: "",
   },
   socials: [
-    { label: "Email", url: "mailto:hello@example.com", icon: "email" },
-    { label: "GitHub", url: "https://github.com/your-handle", icon: "github" },
+    { label: "Email", url: "harutsargsyan2027@u.northwestern.edu", icon: "email" },
+    { label: "GitHub", url: "https://github.com/HarutSargsyan", icon: "github" },
     {
       label: "LinkedIn",
-      url: "https://linkedin.com/in/your-handle",
+      url: "https://www.linkedin.com/in/harutyunsargsyan/",
       icon: "linkedin",
     },
   ],
