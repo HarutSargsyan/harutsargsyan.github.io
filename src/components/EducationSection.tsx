@@ -56,7 +56,7 @@ const EducationSection = ({ education }: EducationSectionProps) => {
                   ) : null}
                 </div>
                 {item.degree ? (
-                  <p className="text-sm text-[color:var(--color-muted)]">
+                  <p className="text-sm italic text-[color:var(--color-muted)]">
                     {item.degree}
                   </p>
                 ) : null}

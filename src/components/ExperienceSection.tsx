@@ -55,8 +55,8 @@ const ExperienceSection = ({
                   )}
                 </div>
                 <div className="space-y-1">
-                  <div className="flex justify-between">
-                    <div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex-1">
                       <div className="flex items-center gap-2">
                         {item.url ? (
                           <a
@@ -76,9 +76,12 @@ const ExperienceSection = ({
                         {item.company}
                         {item.location ? ` · ${item.location}` : ""}
                       </p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)] md:hidden">
+                        {formatRange(item.start, item.end)}
+                      </p>
                     </div>
                     <div className="flex items-center gap-3 md:justify-end">
-                      <p className="text-sm uppercase tracking-[0.18em] text-[color:var(--color-muted)] md:text-right">
+                      <p className="hidden text-sm uppercase tracking-[0.18em] text-[color:var(--color-muted)] md:block md:text-right">
                         {formatRange(item.start, item.end)}
                       </p>
                       <button

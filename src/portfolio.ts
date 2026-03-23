@@ -83,7 +83,7 @@ export const portfolioData: PortfolioData = {
       degree: "Bachelor of Science in Computer Science",
       logo: northwesternLogo,
       details:
-        "Relevant Coursework: Database Systems, Scalable Software Architecture, Programming Languages, Parallel Computing, Operating Systems, Computer Networking, Stachastic Processes",
+        "Relevant Coursework: Database Systems, Scalable Software Architecture, Programming Languages, Parallel Computing, Operating Systems, Computer Networking, Stochastic Processes",
     },
   ],
   experiences: [
