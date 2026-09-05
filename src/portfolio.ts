@@ -2,6 +2,7 @@ import northwesternLogo from "./assets/northwestern_logo.jpeg";
 import cdkLogo from "./assets/cdknorthamerica_logo.jpeg";
 import recatLogo from "./assets/recat_logo.jpeg";
 import slydLogo from "./assets/slyd_group_logo.jpeg"
+import microsoftLogo from "./assets/microsoft_logo.jpg"
 
 
 export type SocialLink = {
@@ -89,26 +90,42 @@ export const portfolioData: PortfolioData = {
   experiences: [
     {
       role: "Software Engineer Intern",
-      company: "CDK Global",
-      start: "June 2025",
-      end: "August 2025",
-      logo: cdkLogo,
+      company: "Microsoft",
+      start: "June 2026",
+      end: "September 2026",
+      location: "Redmond, WA",
+      logo: microsoftLogo,
       details: [
-        "Engineered and production-tested 3 ASP.NET API endpoints supporting OEM dealer-settings workflows, implementing validation layers and fault-tolerant error handling to increase workflow reliability by 30% across thousands of dealership appointments.",
-      "Improved backend performance by 25% by profiling memory and I/O bottlenecks with New Relic APM, optimizing LINQ-heavy database operations, adding strategic SQL indexes, and integrating Redis caching to reduce p95 latency under load.",
-      "Developed a reusable, React sidebar component standardized across applications, implementing full accessibility support and theme configurability, which cut UI rewrite time by 20% and improved component reuse across 4+ teams."
+        "Shipped a public REST API for programmatic Power BI subscription management across multiple backend services, unblocking enterprise customers migrating 30K+ reports and 13K+ subscriptions previously manageable only through the UI.",
+        "Drove the API from customer requirements through design, cross-service integration, and delivery, resolving distributed-system consistency constraints and validating behavior with 1,200+ automated tests in a production environment.",
+        "Built a modular Teams notification pipeline for report-delivery failures, rolled out incrementally alongside the existing email path with zero customer disruption and extensible to new alert types without rework.",
+        "Analyzed 30 days of production telemetry covering 23K+ failed deliveries to scope alerting to unrecoverable failures only, tracing the systemic root cause behind 80% of them to guide a durable fix.",
       ],
     },
     {
       role: "Software Engineer Intern",
-      company: "SLYD",
-      start: "Aug 2024",
+      company: "CDK Global",
+      start: "June 2025",
+      end: "August 2025",
+      location: "Hoffman Estates, IL",
+      logo: cdkLogo,
+      details: [
+        "Built and production-tested 3 .NET API endpoints for OEM dealer-settings workflows, adding validation and error-handling layers that supported hundreds of dealership appointments per day.",
+        "Standardized a reusable React sidebar component across applications with full accessibility support and theme configurability, cutting UI rewrite time by 20% and removing duplicate implementations on 8 different teams.",
+        "Cut endpoint latency by 40% by profiling memory and I/O bottlenecks in New Relic APM, adding targeted SQL indexes, and introducing Redis caching.",
+      ],
+    },
+    {
+      role: "Software Engineer Intern",
+      company: "SLYD (computer resource sharing company)",
+      start: "June 2024",
       end: "September 2024",
+      location: "Chicago, IL",
       logo: slydLogo,
       details: [
-        "Architected and deployed a secure .NET Blazor compute-sharing platform leveraging containerized virtualization, real-time status polling, and tenant isolation rules, enabling people to lend/borrow GPU/CPU resources with 40% greater accessibility.",
-        "Increased PostgreSQL queries throughput by redesigning relational schemas, normalizing data, building composite indexes, and eliminating N+1 query patterns, reducing heavy query runtime by 25%.",
-        "Reduced AWS deployment cycle time by 30% by building Dockerized pipelines and ECR workflows, implementing staged rollouts for zero-downtime updates, and integrating CloudWatch + structured logs to speed up incident diagnosis.",
+        "Architected and deployed a secure .NET Blazor compute-sharing platform using containerized virtualization, real-time status polling, and tenant-isolation rules, letting users lend and borrow GPU/CPU capacity.",
+        "Raised PostgreSQL query throughput by 3x by normalizing relational schemas, building composite indexes, and eliminating N+1 query patterns.",
+        "Cut AWS deployment cycle time by 40% with Dockerized build pipelines and ECR workflows, using staged rollouts to ship updates with zero downtime.",
       ],
     },
     {
@@ -125,11 +142,10 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      name: "GroceryScout",
+      name: "Better Split",
       description:
-        "Track and compare grocery prices across stores to save money on everyday shopping.",
-      link: "https://food-price-tracker-gamma.vercel.app",
-      tags: ["React", "Firebase", "Tailwind CSS"],
+        "Real-time bill splitting app with OCR receipt scanning, WebSocket-synced item claiming, and typo-tolerant item search.",
+      tags: ["Java", "WebSockets", "Protobuf", "Google Cloud Vision", "PostgreSQL"],
     },
     {
       name: "LeFinance",
@@ -137,13 +153,6 @@ export const portfolioData: PortfolioData = {
         "Stock portfolio app with Firebase auth, AWS newsletter pipeline, and predictive analytics.",
       link: "https://youtu.be/LdEM6BMSbyU",
       tags: ["React", "Docker", "Firebase", "AWS", "Python"],
-    },
-    {
-      name: "Minesweeper",
-      description:
-        "Minimalistic minesweeper game clone built with C/C++ and SFML.",
-      link: "https://youtu.be/MQIdJqihNJo",
-      tags: ["C/C++", "SFML"],
     },
     {
       name: "Portfolio",
