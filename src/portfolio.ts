@@ -142,6 +142,13 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
+      name: "Air Sampler FX",
+      description:
+        "Gesture-controlled audio sampler with bare-metal C drivers for touch pads, a rotary encoder, and a distance sensor, streaming events over UART to a real-time Python/NumPy DSP engine for slice playback, effects, and hand-distance-controlled modulation.",
+      link: "https://youtu.be/ENWoqJh1ri8",
+      tags: ["Embedded C", "nRF52 SDK", "I2C", "UART", "Python", "NumPy", "Real-time DSP"],
+    },
+    {
       name: "Better Split",
       description:
         "Real-time bill splitting app with OCR receipt scanning, WebSocket-synced item claiming, and typo-tolerant item search.",
