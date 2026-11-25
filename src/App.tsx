@@ -3,6 +3,7 @@ import { portfolioData } from "./portfolio";
 import Header from "./components/Header";
 import EducationSection from "./components/EducationSection";
 import ExperienceSection from "./components/ExperienceSection";
+import ResearchSection from "./components/ResearchSection";
 import ProjectsSection from "./components/ProjectsSection";
 // import CertificationsSection from "./components/CertificationsSection";
 import Footer from "./components/Footer";
@@ -59,6 +60,7 @@ function App() {
           openExperiences={openExperiences}
           onToggleExperience={toggleExperience}
         />
+        <ResearchSection research={data.research} />
         <ProjectsSection projects={data.projects} />
         {/* <CertificationsSection certifications={data.certifications} /> */}
       </main>

@@ -31,6 +31,16 @@ export type ExperienceItem = {
   details?: string[];
 };
 
+export type ResearchItem = {
+  title: string;
+  context: string;
+  date?: string;
+  authors: string[];
+  description: string;
+  pdf: string;
+  linkLabel: string;
+};
+
 export type ProjectItem = {
   name: string;
   description?: string;
@@ -58,6 +68,7 @@ export type PortfolioData = {
   socials: SocialLink[];
   education: EducationItem[];
   experiences: ExperienceItem[];
+  research: ResearchItem[];
   projects: ProjectItem[];
   certifications: CertificationItem[];
 };
@@ -138,6 +149,27 @@ export const portfolioData: PortfolioData = {
         "Designed and built a modular React Native settings and preferences system with reusable UI primitives, giving users fine-grained control over notifications and app personalization, contributing to a 20% increase in App Store downloads.",
         "Architected scalable Firestore schemas optimized for mobile traffic, introducing batched document reads/writes, sub-collection reorganizations, and index rules that reduced query latency by 30% and cut Firestore costs by 20%.",
       ],
+    },
+  ],
+  research: [
+    {
+      title: "Toward Reproducible Measurement of Government Web Infrastructure Consolidation",
+      context: "CS 298 Project Proposal, Northwestern University",
+      date: "November 2026",
+      authors: ["Harutyun Sargsyan", "Alan Kim"],
+      description:
+        "Proposes an automated, repeatable pipeline for collecting government websites across 61 countries and measuring how their DNS, CDN, and certificate authority providers consolidate over time. Early country adapters recover 98.6% of the 2024 baseline hostnames for Paraguay, 96.8% for Latvia, and 89.2% for the United States.",
+      pdf: "/research/government-web-consolidation-proposal.pdf",
+      linkLabel: "Proposal",
+    },
+    {
+      title: "Evaluating Internet Measurement Bias Using Metis, APNIC, and RIPE Probe Selection",
+      context: "CS 445 Reproducibility Project, Northwestern University",
+      authors: ["Harutyun Sargsyan", "Lianhao Zheng"],
+      description:
+        "Reproduced a subset of the Metis paper's experiments, comparing three RIPE Atlas probe selection strategies through RTT measurements to nine anycast targets. Median RTT was 13.05 ms for default worldwide selection, 14.09 ms for Metis AS-path diversity, and 21.17 ms for APNIC top ASes, consistent with the original finding that naive selection yields overly optimistic latency.",
+      pdf: "/research/metis-probe-selection-reproducibility.pdf",
+      linkLabel: "Paper",
     },
   ],
   projects: [
